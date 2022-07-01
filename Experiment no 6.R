@@ -1,0 +1,34 @@
+#The R-programming for obtaining a solution of the given problem is as follows -
+  x=array(c(6,10,8,9,6,3),dim=c(3,2))
+  x
+  x1=x[,1]
+  x1
+  x2=x[,2]
+  x2
+  x1_bar=mean(x1)
+  x1_bar
+  x2_bar=mean(x2)
+  x2_bar
+  x_bar=array(c(x1_bar,x2_bar),dim=c(2,1))
+  x_bar
+  n=3
+  s11=var(x1)*(n/(n-1))
+  s11
+  s12=cov(x1,x2)*(n/(n-1))
+  s12
+  s21=s12
+  s21
+  s22=var(x2)*(n/(n-1))
+  s22
+  s=array(c(s11,s12,s21,s22),dim=c(2,2))
+  s
+  mu=array(c(9,5),dim=c(2,1))
+  mu
+  d=x_bar-mu
+  d
+  t2_obs=n*t(d)%*%solve(s)%*%d
+  t2_obs
+  p=2
+  t2_tab=(((n-1)*p)/(n-p))*qf(0.95,2,1)
+  t2_tab
+  
